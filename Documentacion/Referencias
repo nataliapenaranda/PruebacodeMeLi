@@ -1,0 +1,15 @@
+Referencias utilizadas para elaborar el codigo del challenge:
+
+PYTHON
+- https://yuji.wordpress.com/2011/06/22/python-imaplib-imap-example-with-gmail/
+- https://www.thepythoncode.com/article/reading-emails-in-python
+- https://github.com/ecederstrand/exchangelib/issues/122
+- https://stackoverflow.com/questions/51634576/extract-outlook-email-body-and-recipient-email-address-using-python
+
+SQL
+
+-https://www.tutorialesprogramacionya.com/pythonya/detalleconcepto.php?punto=81&codigo=81&inicio=75
+-https://stackoverflow.com/questions/18244565/how-can-i-use-executemany-to-insert-into-mysql-a-list-of-dictionaries-in-python
+-https://www.w3schools.com/python/python_mysql_insert.asp
+
+

@@ -1,0 +1,31 @@
+Caso - Keyword en Gmail
+
+Objetivo
+
+Armar un programa en Python, Go, Groovy o Java que pueda acceder, de manera automática, a una cuenta de Gmail, leer los correos e identificar aquellos que tengan la palabra "DevOps"​ en el Body.
+De estos correos identificados, se deberá guardar en una base de datos MySQL los siguientes campos:
+
+● fecha de recepción del correo
+● to (remitente que ha enviado el correo)
+● ​subject​
+
+Tené en cuenta que solo deberá guardar aquellos correos que ya no haya guardado en alguna corrida anterior.
+
+Entregables
+Se espera:
+
+● Código fuente (en zip o url al repositorio)
+● Instrucciones para la ejecución de la aplicación (incluida cualquier aplicación o librería a instalar
+para el correcto funcionamiento del programa)
+● Usuario y contraseña de la cuenta de gmail (deberá crear una cuenta específica para este challenge) para validación de la aplicación.
+● Descripción de la aplicación realizada, problemas y soluciones con los que se encontró al realizar la misma.
+Consideraciones generales A tener en cuenta:
+● Se podrán crear todas las funciones complementarias que se consideren necesarias para un correcto funcionamiento de la aplicación.
+● Se recomienda modularizar y aplicar buenas prácticas de programación para un mejor entendimiento del código.
+● Se considerará durante la evaluación el manejo de errores, de autenticación y la documentación del código.
+
+Bonus (opcionales):
+
+● Hacer test unitarios y de integración
+● Dockerizar la aplicación
+● Tener el código en Github

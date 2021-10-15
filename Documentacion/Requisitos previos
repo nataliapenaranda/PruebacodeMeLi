@@ -1,0 +1,16 @@
+Tener instalado el entorno de desarrollo PyCharm
+Puede descargarse en: https://www.jetbrains.com/es-es/pycharm/download/#section=mac
+
+Tener instalado MySQL
+Puede desargarse en: https://www.mysql.com/downloads/
+
+Tener en cuenta que se deberá recordar la contraseña que utilizo para la configuracion de MySQL, ya que en el archivo
+"conexion2.py" linea 7, la variable "passwd" debera ser reemplazado por la contraseña de su MySQL local.
+
+Para la ejecucion del archivo "conexion2.py" debe asegurarse de que la base de datos este inicializada
+y el servicio MySQLServer este activo. Puede verificar esto en Preferencias del sistema > MySQL.
+
+
+
+
+

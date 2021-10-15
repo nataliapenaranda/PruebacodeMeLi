@@ -1,0 +1,26 @@
+1. #  -> Utilizado para hacer comentarios
+
+2. print() -> Imprimir un mensaje en la consola
+
+3. if -> La palabra clave if captura cualquier parametro que cumpla con las condiciones anteriores.
+
+4. else -> La palabra clave else captura cualquier cosa que no sea detectada por las condiciones anteriores.
+
+5. elif -> La palabra clave elif es la forma que tiene Python de decir "si las condiciones anteriores no son verdaderas, pruebe esta condición".
+
+6. while -> Con el ciclo while podemos ejecutar un conjunto de declaraciones siempre que una condición sea verdadera
+
+7. for -> Un bucle for se utiliza para iterar sobre una secuencia (que es una lista, una tupla, un diccionario, un conjunto o una cadena).
+
+Python admite las condiciones lógicas habituales de las matemáticas:
+
+Es igual a -> a == b
+No es igual a ->  a != b
+Menor que ->  a < b
+Menor o igual a ->  a <= b
+Mayor que ->  a > b
+Mayor o igual a ->  a >= b
+
+Para más información puede consultarse:
+- https://docs.python.org/3/
+- https://www.w3schools.com/python/default.asp

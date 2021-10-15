@@ -1,0 +1,82 @@
+En el desarrollo del codigo presente varios desafios.
+
+Lo primero que realice fue un análisis detallado del challenge, en donde conclui que se dividia en cuatro partes importantes:
+
+1.la conexión automatica con la cuenta de gmail (y leer los correos que contiene).
+2. Buscar la palabra clave "DevOps" en todos los correos
+3. De los registros identificados en el paso 2, guardar fecha de recepción del correo, to (remitente que ha enviado el correo)
+y asunto.
+4. La conexión de python con mysql, en donde se almacenen los datos identificados en el paso 3.
+
+Comence con la conexión de la cuenta gmail, lo que supuso un reto porque el primer dia que lo intente se generaron varios errores,
+entre ellos
+
+1. Presente errores con los puertos que estaba utilizando desde el protocolo imap. Inlcuso cuando utilice el puerto 993 unicamente para
+recepción de correos electronicos seguían presentandose errores de acceso.
+
+2. Trate de utilizar la API que proporciona google para hacer la conexión de gmail con python, que se encuentra
+en el siguiente enlace https://developers.google.com/gmail/api/quickstart/python. La página presento una modificación
+y ya no permite descargar el archivo .json con las credenciales que permiten establecer la conexión de python con la
+API de gmail. Por lo tanto, no me estaba permitiendo acceder al correo electrónico de prueba.
+
+Configure manualmente los perimisos de la cuenta de gmail, concediendo el acceso de las aplicaciones poco seguras
+a la cuenta para poder establecer la conexión desde python y que el programa pueda acceder automaticamente dadas las
+credenciales del correo eléctronico.
+
+Despues de esto, realice la codificación que daría acceso de manera automática a la cuenta de gmail, para así extraer todos los
+emails que hay en la bandeja de entrada. En el código, extraje remitenete, asunto, cuerpo de correo y fecha.
+
+Despues, procedó a realizar el paso 2, que es buscar la palabra  "DevOps" en todos los correos. Pense en varias alternativas
+y buscando en internet existen diversos metodos para la búsqueda de palabras en Python, sin embargo, opte por implementar una
+validacion sencilla con una sentencia if (if "DevOps" in body) lo que funcionó bien desde el inicio. Como prueba para ver que estuviese
+funcionando correctamente, asigne a la variable "devops" el valor 1, de los correos que contiene la palabra  "DevOps" y 0 para
+los correos que no la contienen.
+
+En cuanto al desarrollo del codigo que se iba a realizar el proceso de insersión en la base de datos MYSQL,una vez identificados los correos con la palabra "DevOps", en las variables globales "lista1","lista2" y "lista3" almacene
+la fecha, el remitente y el asunto respectivamente a cada lista.
+
+Prosegui a establecer la conexión de Python con MySQL, que tambien presento una serie de desafíos debido a que me
+aparecieron errores de autenticación, error en el puerto de conexion y a pesar de ya tener instalado el driver de mysql
+en mi máquina no era posible ejecutar el comando para inicializar mysql, no parecia funcionar.
+
+Despues de varios intentos y probar diferentes soluciones, con el comando "/usr/local/mysql/bin/mysql -u root -p"
+consegui la correcta autenticación con MySQL y procedí a establecer la conexión.
+
+Cree la base de datos "gmail" para el desarrollo del ejercicio y dentro de esta base de datos cree la tabla "gmaildevops",
+en donde se almacena la informacion:
+
+	●  fecha de recepción del correo
+	●  to (remitente que ha enviado el correo)
+	●  subject
+
+a partir de la validación que se realizo en la hoja main.py para determinar si el correo contiene en el cuerpo la palabra
+"DevOps".
+
+Asimismo, estableci la sentencia "INSERT IGNORE", para que en caso de existir un valor duplicado en un campo de CLAVE PRIMARIA
+no genere un error sino que simplemente lo ignore y sobreescriba el registro, lo que permite que no existan datos duplicados en la
+tabla emails.
+
+A partir de las listas 1,2,3, detalladas anteriormente, asigne en la variable datos, los elementos que se encuentran en las 3 listas recolectadas
+en el archivo main. El codigo trae los 5 primeros elementos de las listas, sin embargo, pueden agregarse cuantos registros se desee,
+lo anterior teniendo en cuenta el tamaño de la lista.
+
+Por ejemplo si la lista1 tiene 10 elementos podremos agregar lista1[5], lista1[6],..., y asi sucesivamente hasta llegar al elemento 10
+Entonces, el fragmento del codigo se afectaria asi:
+
+datos = [
+    (lista1[0], lista2[0], lista3[0]),
+    (lista1[1], lista2[1], lista3[1]),
+    (lista1[2], lista2[2], lista3[2]),
+    (lista1[3], lista2[3], lista3[3]),
+    (lista1[4], lista2[4], lista3[4]),
+    (lista1[5], lista2[5], lista3[5]),
+    (lista1[6], lista2[6], lista3[6]),
+    (lista1[7], lista2[7], lista3[7]),
+    (lista1[8], lista2[8], lista3[8]),
+    (lista1[9], lista2[9], lista3[9]),
+    (lista1[10], lista2[10], lista3[10]),
+
+]
+
+Finalmente, en el archivo referencias estan los enlaces que consulte para la elaboración de los códigos. Visualice varios
+tutoriales y videos explicativos en Youtube para tener una mejor idea de como desarrollar el desafio.

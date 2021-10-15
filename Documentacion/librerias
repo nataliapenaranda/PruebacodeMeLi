@@ -1,0 +1,11 @@
+funcionamiento Keyword en Gmail
+
+import imaplib
+import email
+import traceback
+import os
+import webbrowser
+
+conexion con sql
+
+import mysql.connector

@@ -1,0 +1,31 @@
+1.Listar todas las bases de datos.
+show databases;
+
+2. Conectarse a una base de datos determinada.
+connect [database];
+
+3. Utilizar una base de datos:
+use [database];
+
+4. Listar todas las tablas de una base de datos existente.
+show tables;
+
+5. Muestra la estructura de una tabla de la base de datos.
+describe [table];
+
+6.Eliminar una tabla determinada, incluyendo registros y estructura.
+drop table [table];
+
+7.Elimina una tabla determinada de la base de datos, pero antes verifica que si exista.
+drop table if exists [table];
+
+8. Elimina los registros, pero mantiene intacta la estructura de la tabla.
+truncate table [table];
+
+9. Renombrar una tabla determinada de la base de datos.
+rename table [table] to [nuevo nombre de tabla];
+
+10. Seleccionar los registros existentes en una tabla.
+select * from [tabla];
+
+Para más información puede consultarse https://dev.mysql.com/doc/.
