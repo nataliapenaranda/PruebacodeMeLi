@@ -5,8 +5,8 @@ Armar un programa en Python para acceder de manera automática, a una cuenta de 
 De los correos identificados, guardar en una base de datos MySQL los campos: 
 
 - fecha de recepción del correo 
-- to (remitente que ha enviado el correo) 
-- subject 
+- to (remitente que ha enviado el correo) 
+- subject 
    
 Solo deberá guardar aquellos correos que ya no haya guardado en alguna corrida anterior. 
 
